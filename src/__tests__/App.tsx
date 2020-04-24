@@ -30,7 +30,7 @@ import App from '../App';
 const apiMock = new MockAdapter(api);
 
 const wait = (amount = 0): Promise<void> => {
-  return new Promise((resolve) => setTimeout(resolve, amount));
+  return new Promise(resolve => setTimeout(resolve, amount));
 };
 
 const actWait = async (amount = 0): Promise<void> => {
@@ -210,6 +210,7 @@ describe('Dashboard', () => {
       ],
       'import.csv',
       {
+        // TODO: text/csv (others) - application/vnd.ms-excel (for windows)
         type: 'text/csv',
       },
     );
